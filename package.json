@@ -1,0 +1,47 @@
+{
+  "name": "vibe-system",
+  "version": "1.0.0",
+  "description": "Visual Integrated Backend Environment - 독립 실행형 AI 개발 환경",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 3001",
+    "build": "next build",
+    "start": "next start -p 3001",
+    "lint": "next lint",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.17.4",
+    "@types/node": "^20.10.5",
+    "@types/react": "^18.2.45",
+    "@types/react-dom": "^18.2.18",
+    "dexie": "^4.2.0",
+    "firebase": "^12.1.0",
+    "firebase-admin": "^13.4.0",
+    "next": "14.2.32",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "socket.io-client": "^4.8.1",
+    "typescript": "^5.3.3",
+    "xterm": "^5.3.0",
+    "xterm-addon-fit": "^0.8.0",
+    "xterm-addon-web-links": "^0.9.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.16",
+    "eslint": "^8.55.0",
+    "eslint-config-next": "14.2.32",
+    "postcss": "^8.4.32",
+    "tailwindcss": "^3.4.0"
+  },
+  "keywords": [
+    "vibe",
+    "ai",
+    "development",
+    "environment",
+    "agents",
+    "automation"
+  ],
+  "author": "VIBE System",
+  "license": "MIT"
+}

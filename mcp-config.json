@@ -1,0 +1,59 @@
+{
+  "mcpServers": {
+    "zen-mcp": {
+      "command": "python",
+      "args": ["zen-mcp-server/server.py"],
+      "env": {
+        "PYTHONPATH": "./zen-mcp-server",
+        "GEMINI_API_KEY": "${GEMINI_API_KEY}",
+        "OPENAI_API_KEY": "${OPENAI_API_KEY}",
+        "OPENROUTER_API_KEY": "${OPENROUTER_API_KEY}",
+        "ANTHROPIC_API_KEY": "${ANTHROPIC_API_KEY}",
+        "GROQ_API_KEY": "${GROQ_API_KEY}"
+      },
+      "capabilities": {
+        "multiModel": true,
+        "contextContinuity": true,
+        "codeReview": true,
+        "debugging": true,
+        "terminal": true,
+        "filesystem": true
+      },
+      "models": {
+        "primary": "claude-3-opus",
+        "secondary": [
+          "gemini-pro",
+          "gpt-4-turbo",
+          "grok-2",
+          "llama-3-70b",
+          "mixtral-8x7b"
+        ]
+      }
+    },
+    "filesystem": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-filesystem"],
+      "env": {
+        "WORKSPACE_ROOT": "C:\\vibe-system"
+      }
+    },
+    "terminal": {
+      "command": "npx", 
+      "args": ["-y", "@modelcontextprotocol/server-bash"],
+      "env": {
+        "SHELL": "cmd.exe",
+        "SAFE_MODE": "true"
+      }
+    }
+  },
+  "vibeIntegration": {
+    "enabled": true,
+    "port": 3001,
+    "websocket": true,
+    "authentication": "token",
+    "maxConcurrentModels": 5,
+    "timeout": 30000,
+    "projectName": "vibe-system",
+    "environment": "development"
+  }
+}
